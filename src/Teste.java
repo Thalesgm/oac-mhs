@@ -1,27 +1,47 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 public class Teste {
 
 	public static void main(String[] args) {
+		String file1 = args[0];
+		String file2 = args[1];
 		Manager m = new Manager(4);
-		for(int i = 1; i <= 240; i++){
-			System.out.println(i);
-			m.disco.load(i);
+		try {
+			Scanner s = new Scanner(new File(file1));
+			m = new Manager(s.nextInt());
+			while(s.hasNextInt()){
+				m.disco.load(s.nextInt());
+			}
+			s.close();
+		} catch (FileNotFoundException e) {
+
+			e.printStackTrace();
 		}
 		m.disco.print();
-		m.coreSave(0, 50, 24);
-		System.out.println(m.coreLoad(2, 50));
-		
-		/*Page p = new Page(30);
-		p.word[1].address = 5;
-		//p.print();
-		MainMem m = new MainMem();
-		for(int i = 0; i <= 10; i++){
-			System.out.println(i);
-			m.load(d.page[i]);
+		try {
+			Scanner s = new Scanner(new File(file2));
+			while(s.hasNext()){
+				String ctrl = s.next();
+				if(ctrl.matches("LOAD")){
+					int core = s.nextInt();
+					int add = s.nextInt();
+					System.out.println("Calling load on Core: " + core + "for address: " + add);
+					m.coreLoad(core, add);
+				}
+				else if(ctrl.matches("SAVE")){
+					int core = s.nextInt();
+					int add = s.nextInt();
+					int data = s.nextInt();
+					System.out.println("Calling Save on Core: " + core + "for address: " + add);
+					m.coreSave(core, add, data);
+				}
+			}
+			s.close();
+		} catch (FileNotFoundException e) {
+
+			e.printStackTrace();
 		}
-		m.print();
-		Block b = new Block(0);
-		b = d.page[0].getBlock(2);
-		b.print();*/
 	}
 }

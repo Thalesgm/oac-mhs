@@ -63,7 +63,9 @@ public class Disc {
 	 */
 	public void load(int d){
 		int pos = page[currentsz/8].getPosition(currentsz);
+		System.out.println(pos);
 		page[currentsz/8].word[pos].data = d;
 		currentsz++;
+		System.out.println("Size " +currentsz);
 	}
 }
