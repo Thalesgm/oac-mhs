@@ -43,6 +43,7 @@ public class MainMem {
 			countLRU++;
 		}
 	}
+	
 	/**
 	 * Method to determine the Least Recently Used(LRU) Page position.
 	 * @return The value of the LRU position 
@@ -56,6 +57,7 @@ public class MainMem {
 		}
 		return last;
 	}
+	
 	/**
 	 * Printing method for the Main Memory. Prints each page, in order, but referencing the Disc page where it belongs.
 	 */
@@ -65,6 +67,7 @@ public class MainMem {
 			System.out.println("");
 		}
 	}
+	
 	/**
 	 * Method to find a Page in the Memory, using a specific world that belongs on that page.
 	 * @param add Reference to the world being searched in the memory.
@@ -80,6 +83,12 @@ public class MainMem {
 		}
 		return -1;
 	}
+	
+	/**
+	 * Method to update a Word's data in the main memory.
+	 * @param add Address of the word to be updated.
+	 * @param d Data to be used for update.
+	 */
 	public void update(int add, int d){
 		Word w = new Word();
 		for(int i = 0; i < currentsz; i++){

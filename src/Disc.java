@@ -33,6 +33,7 @@ public class Disc {
 		}
 		
 	}
+	
 	/**
 	 * Printing method for the disc.
 	 * Prints the data on the disc, separating each page of the Disc in order.
@@ -43,6 +44,7 @@ public class Disc {
 			System.out.println("");
 		}
 	}
+	
 	/**
 	 * Method for updating the data of a Word
 	 * @param p Position on the page that needs to be updated.
@@ -55,6 +57,10 @@ public class Disc {
 		w.data = d;
 	}
 	
+	/**
+	 * Method to load Data into the disc.
+	 * @param d Value to be added to the disc.
+	 */
 	public void load(int d){
 		int pos = page[currentsz/8].getPosition(currentsz);
 		page[currentsz/8].word[pos].data = d;

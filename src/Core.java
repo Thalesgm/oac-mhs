@@ -16,6 +16,10 @@ public class Core {
 		}
 	}
 	
+	/**
+	 * Method to load a block, usually from the L2Cache. 
+	 * @param b Block To be loaded in the Cores L1 cache.
+	 */
 	public void load(Block b){
 		if(currentsz < size){
 			block[currentsz].idblock = b.idblock;
@@ -38,6 +42,11 @@ public class Core {
 			countLRU++;
 		}
 	}
+	
+	/**
+	 * Method for getting Least Recently Used position of the cache.
+	 * @return the value of the LRU position.
+	 */
 	public int getLRU(){
 		int last = 0;
 		for(int i = 1; i < size; i++){
@@ -47,6 +56,12 @@ public class Core {
 		}
 		return last;
 	}
+	
+	/**
+	 * Method to check if the search for an address results in a hit or a miss.
+	 * @param add Address being looked.
+	 * @return The position if the address is found(hit) or -1 if it doesn't (miss).
+	 */
 	public int hitcheck(int add){
 		for(int i = 0; i < currentsz; i++){
 			if(block[i].search(add)){
@@ -80,6 +95,11 @@ public class Core {
 		return -1;
 	}
 	
+	/**
+	 * Method to Update the data in an Page Table's address.
+	 * @param add address to be updated
+	 * @param d Data for updating.
+	 */
 	public void update(int add, int d){
 		Word w = new Word();
 		for(int i = 0; i < currentsz; i++){

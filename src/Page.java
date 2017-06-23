@@ -29,6 +29,9 @@ public class Page {
 		return null;
 	}
 	
+	/**
+	 * Printing method for a Page.
+	 */
 	public void print(){
 		System.out.print("Page " + idpag + ": ");
 		for(int i = 0; i < pagesz; i++){
@@ -37,6 +40,11 @@ public class Page {
 		System.out.print("|");
 	}
 	
+	/**
+	 * Method to separate a block from a page.
+	 * @param add Address of the Word used to define which side of the page will be returned
+	 * @return A Block which contains either the first, or the last block from the page.
+	 */
 	public Block getBlock(int add){
 		Block b = new Block(idpag);
 		b.idblock = idpag;
@@ -58,6 +66,11 @@ public class Page {
 		}
 	}
 	
+	/**
+	 * Method to get the current position of an address in a page;
+	 * @param add Address being searched
+	 * @return An integer between 0 and 7, which represents the actual position of the Word in that specific page.
+	 */
 	public int getPosition(int add){
 		int i = 0;
 		while(word[i].address != add){
@@ -65,6 +78,12 @@ public class Page {
 		}
 		return i;
 	}
+	
+	/**
+	 * Searching method for a Word in a page
+	 * @param add Address of the Word being searched.
+	 * @return True if Word is found. False if it'snt.
+	 */
 	public boolean search(int add){
 		int i = 0;
 		while(i < pagesz){

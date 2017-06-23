@@ -14,6 +14,7 @@ public class L2Cache {
 			block[i] = new Block(0);
 		}
 	}
+	
 	/**
 	 * Loading method for a incoming block.
 	 * If Cache is not filled, loads the block on the first block available.
@@ -56,6 +57,7 @@ public class L2Cache {
 		}
 		return last;
 	}
+	
 	/**
 	 * Printing method of the Cache.
 	 * Prints each block referencing the page of origin.
@@ -83,6 +85,11 @@ public class L2Cache {
 		return -1;
 	}
 	
+	/**
+	 * Method to update the data in a Word if it's present on the cache.
+	 * @param add Address of the Word in the Page Table.
+	 * @param d Data for updating.
+	 */
 	public void update(int add, int d){
 		Word w = new Word();
 		for(int i = 0; i < currentsz; i++){

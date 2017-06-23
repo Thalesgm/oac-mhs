@@ -20,6 +20,14 @@ public class Manager {
 		}
 	}
 	
+	/**
+	 * Loads the data from a address in the Disc, using the Pages as references.
+	 * The loading process follows the hierarchy established for this project, looking in each level.
+	 * From L1 to L2 to PriMem to Disc if it keeps missing and stopping on first hit, and getting back to loading to the core.
+	 * @param i The numeric position of the core making the request.
+	 * @param add Address where the Word is
+	 * @return The Data from the Word loaded.
+	 */
 	public int coreLoad(int i, int add){
 		int check = core[i].hitcheck(add);
 		if(check >= 0){
@@ -33,6 +41,11 @@ public class Manager {
 		}
 		
 	}
+	/**
+	 * Method to load a block from the cache to the core.
+	 * @param i Core that made the request
+	 * @param add address for verification
+	 */
 	public void cachetocore(int i, int add){
 		int check = l2Cache[i/2].hitcheck(add);
 		if(check >= 0){
@@ -44,6 +57,12 @@ public class Manager {
 			core[i].load(l2Cache[i/2].block[check2]);
 		}
 	}
+	
+	/**
+	 * Method to load from Primary memory to L2 Cache.
+	 * @param i Core making the request
+	 * @param add Address for verification
+	 */
 	public void memtocache(int i,int add){
 		int check = memp.getPage(add);
 		if(check >=0){
@@ -57,10 +76,22 @@ public class Manager {
 			l2Cache[i/2].load(b);
 		}
 	}
+	/**
+	 * Method to load from Disc to Primary Memory.
+	 * @param add Address for loading.
+	 */
 	public void disctomem(int add){
 		memp.load(disco.page[add/8]);
 	}
 	
+	/**
+	 * Method to save data in a Word.
+	 * The process consists in loading the request data position if not found by the Core in its L1 Cache, or directly
+	 * updating if it's already there. Also the Word is changed in all levels of the Memory where it's found. 
+	 * @param i Core making the request.
+	 * @param add Address from the page Tables.
+	 * @param data Information for updating.
+	 */
 	public void coreSave(int i, int add, int data){
 		int check = core[i].hitcheck(add);
 		if(check >= 0){

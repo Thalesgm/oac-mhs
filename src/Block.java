@@ -27,6 +27,11 @@ public class Block {
 		return false;
 	}
 	
+	/**
+	 * Gets the data from and address.
+	 * @param add The address which needs to be retrieved
+	 * @return The data part of the word.
+	 */
 	public int getData(int add){
 		int i = 0;
 		while(i < blocksz){
@@ -37,6 +42,7 @@ public class Block {
 		}
 		return -1;
 	}
+	
 	/**
 	 * Method for updating the data in a Word.
 	 * @param p Address reference to Page Table.
@@ -49,6 +55,7 @@ public class Block {
 		}
 		word[i].data = d;
 	}
+	
 	/**
 	 * Printing Method for a block, prints the Block's respective page followed by its current data.
 	 */
@@ -59,6 +66,11 @@ public class Block {
 		}
 	}
 	
+	/**
+	 * Method to search a Word in a Block.
+	 * @param add Address of the Word Being searched
+	 * @return The Word searched if it's found. Null if doesn't.
+	 */
 	public Word searchWord(int add){
 		int i = 0;
 		while(i < blocksz){
