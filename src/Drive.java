@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class Teste {
+public class Drive {
 
 	public static void main(String[] args) {
 		String file1 = args[0];
