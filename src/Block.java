@@ -62,7 +62,7 @@ public class Block {
 	public void print(){
 		System.out.print("Printing block from page " + idblock +": ");
 		for(int i = 0; i < blocksz; i++){
-			System.out.print(word[i].address + " ");
+			System.out.print(word[i].data + " ");
 		}
 	}
 	
