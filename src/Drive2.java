@@ -26,7 +26,7 @@ public class Drive2 {
 					int core = s.nextInt();
 					int add = s.nextInt();
 					int data = s.nextInt();
-					System.out.println("Calling Save on Core: " + core + " for address: " + add);
+					System.out.println("Calling Save on Core: " + core + " for address: " + add + " Saving: " + data);
 					m.coreSave(core, add, data);
 				}
 				else if(ctrl.matches("PRINTD")){
