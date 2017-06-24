@@ -95,17 +95,33 @@ public class Manager {
 	public void coreSave(int i, int add, int data){
 		int check = core[i].hitcheck(add);
 		if(check >= 0){
-			core[i].update(add, data);
-			l2Cache[i/2].update(add, data);
+			for(int j = 0; j < corecount; j++){
+				core[j].update(add, data);
+				l2Cache[j/2].update(add, data);
+			}
 			memp.update(add, data);
 			disco.update(add, data);
 		}
 		else{
 			coreLoad(i, add);
-			core[i].update(add, data);
-			l2Cache[i/2].update(add, data);
+			for(int j = 0; j < corecount; j++){
+				core[j].update(add, data);
+				l2Cache[j/2].update(add, data);
+			}
 			memp.update(add, data);
 			disco.update(add, data);
+		}
+	}
+	public void printL2(){
+		for(int i = 0; i < corecount/2; i++){
+			System.out.println("Printing Core information for L2 Cache: " + i);
+			l2Cache[i].print();
+		}
+	}
+	public void printL1(){
+		for(int i = 0; i < corecount; i++){
+			System.out.println("Printing Core information for L1 Cache for core: " + i);
+			core[i].print();
 		}
 	}
 }

@@ -37,6 +37,20 @@ public class Drive {
 					System.out.println("Calling Save on Core: " + core + "for address: " + add);
 					m.coreSave(core, add, data);
 				}
+				else if(ctrl.matches("PRINTD")){
+					System.out.println("Printing current Disc stored information");
+					m.disco.print();
+				}
+				else if(ctrl.matches("PRINTM")){
+					System.out.println("Printing current Memory information");
+					m.memp.print();
+				}
+				else if(ctrl.matches("PRINTC2")){
+					m.printL2();
+				}
+				else if(ctrl.matches("PRINTC1")){
+					m.printL1();
+				}
 			}
 			s.close();
 		} catch (FileNotFoundException e) {

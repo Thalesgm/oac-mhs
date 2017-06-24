@@ -62,7 +62,7 @@ public class MainMem {
 	 * Printing method for the Main Memory. Prints each page, in order, but referencing the Disc page where it belongs.
 	 */
 	public void print(){
-		for(int i = 0; i < size; i++){
+		for(int i = 0; i < currentsz; i++){
 			page[i].print();
 			System.out.println("");
 		}

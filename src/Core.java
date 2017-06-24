@@ -71,7 +71,7 @@ public class Core {
 		return -1;
 	}
 	public void print(){
-		for(int i = 0; i < size; i++){
+		for(int i = 0; i < currentsz; i++){
 			block[i].print();
 			System.out.println("");
 		}
