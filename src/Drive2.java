@@ -34,7 +34,7 @@ public class Drive2 {
 					m.disco.print();
 				}
 				else if(ctrl.matches("PRINTM")){
-					System.out.println("Printing current Memory information");
+					System.out.println("Printing current Main Memory information");
 					m.memp.print();
 				}
 				else if(ctrl.matches("PRINTC2")){
