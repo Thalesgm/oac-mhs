@@ -50,8 +50,10 @@ public class L2Cache {
 	 */
 	public int getLRU(){
 		int last = 0;
+		int current = usage[0];
 		for(int i = 1; i < size; i++){
-			if(usage[i] < usage[i-1]){
+			if(current > usage[i]){
+				current = usage[i];
 				last = i;
 			}
 		}
@@ -96,7 +98,8 @@ public class L2Cache {
 			if(block[i].search(add)){
 				w = block[i].searchWord(add);
 				w.data = d;
-				usage[i]++;
+				usage[i] = countLRU;
+				countLRU++;
 			}
 		}
 	}

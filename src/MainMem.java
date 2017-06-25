@@ -50,8 +50,10 @@ public class MainMem {
 	 */
 	public int getLRU(){
 		int last = 0;
+		int current = usage[0];
 		for(int i = 1; i < size; i++){
-			if(usage[i] < usage[i-1]){
+			if(current > usage[i]){
+				current = usage[i];
 				last = i;
 			}
 		}
