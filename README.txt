@@ -43,10 +43,12 @@ Argumentos:
 	PRINTC2: Imprime o conteudo das Caches L2 de todos os cores.
 	PRINTC1: Imprime o conteudo das Caches L1 de todos os cores.
 	
-	A primeira linha deve conter um numero inteiro par que ira representar o numero de cores.
+	A primeira linha deve conter um numero inteiro par 
+	que ira representar o numero de cores.
 	
-	No caso de o drive usado ser o 'DriveOpt', O arg0 como um arquivo contendo o numero de cores
-	na primeira linha seguido de valores para carregar no disco.
+	No caso de o drive usado ser o 'DriveOpt', O arg0 como um arquivo 
+	contendo o numero de cores na primeira linha seguido de valores para 
+	carregar no disco.
 	O arg1 deve conter as instruções para o simulador.
 	
 	Exemplos de arquivos podem ser encontrados nas pastas drive1files e driveOptfiles.
