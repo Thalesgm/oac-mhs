@@ -14,7 +14,7 @@ Para executá-lo, são necessarios os arquivos abaixo listados.
 	- Block.java
 	- Core.java
 	- Disc.java
-	- Drive.java ou Drive2.java
+	- Drive.java
 	- L2Cache.java
 	- MainMem.java
 	- Page.java
@@ -24,15 +24,17 @@ Todos os arquivos acima se encontram na pasta src.
 Para compilação o usuario pode usar uma IDE com compilador java (ex: Eclipse)
 ou executar a partir da linha de comando em terminal seguindo os passos:
 	1- Acessar a pasta src
-	2- Executar javac para drive.java ou drive2.java
-	3- Executar 'drive arg0 arg1' ou 'drive2 arg1'
+	2- Executar javac para drive.java
+	3- Executar 'drive arg0'
 	4- Arg0 é um arquivo txt no formato de Setup listado abaixo.
-	5- Arg1 é um arquivo de comandos, que pode apresentar variações para drive e drive2
+	
+	Obs: Há a opção de usar o DriveOpt.java para compilação usando Javac DriveOpt.java 
+	e executando DriveOpt arg0 arg1
 
 Argumentos:
 	Arquivo de comandos:
 
-	O arquivo de comandos para os drives consistem em uma lista dos comandos abaixo:
+	O arquivo de comandos para o drive consiste em uma lista dos comandos abaixo:
 	
 	LOAD A B: Carrega o endereço B para o core A
 	SAVE A B C: Escreve em B o valor de C por meio do core A.
@@ -41,12 +43,12 @@ Argumentos:
 	PRINTC2: Imprime o conteudo das Caches L2 de todos os cores.
 	PRINTC1: Imprime o conteudo das Caches L1 de todos os cores.
 	
-	No caso de o drive usado ser o 'drive2' A primeira linha do arquivo deve
-	conter um valor inteiro par que representa o numero de cores 
-	para inicialização do simulador.
-	No caso do 'drive.java' o numero de cores deve estar na primeira linha do 
-	arg0.txt seguido dos valores a serem carregados no disco.
+	A primeira linha deve conter um numero inteiro par que ira representar o numero de cores.
 	
-	Exemplos de arquivos podem ser encontrados nas pastas drive1files e drive2files.
+	No caso de o drive usado ser o 'DriveOpt', O arg0 como um arquivo contendo o numero de cores
+	na primeira linha seguido de valores para carregar no disco.
+	O arg1 deve conter as instruções para o simulador.
+	
+	Exemplos de arquivos podem ser encontrados nas pastas drive1files e driveOptfiles.
 
 Em caso de duvida ler o relatorio do projeto ou os comentarios no código.
