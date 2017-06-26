@@ -108,7 +108,8 @@ public class Core {
 			if(block[i].search(add)){
 				w = block[i].searchWord(add);
 				w.data = d;
-				usage[i]++;
+				usage[i] = countLRU;
+				countLRU++;
 			}
 		}
 	}
