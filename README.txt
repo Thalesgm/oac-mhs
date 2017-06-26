@@ -41,10 +41,11 @@ Argumentos:
 	PRINTC2: Imprime o conteudo das Caches L2 de todos os cores.
 	PRINTC1: Imprime o conteudo das Caches L1 de todos os cores.
 	
-	No caso de o drive usado ser o 'drive2' A primeira linha do arquivo deve conter um valor inteiro par
-	que representa o numero de cores para inicialização do simulador.
-	No caso do 'drive.java' o numero de cores deve estar na primeira linha do arg0.txt seguido dos
-	valores a serem carregados no disco.
+	No caso de o drive usado ser o 'drive2' A primeira linha do arquivo deve
+	conter um valor inteiro par que representa o numero de cores 
+	para inicialização do simulador.
+	No caso do 'drive.java' o numero de cores deve estar na primeira linha do 
+	arg0.txt seguido dos valores a serem carregados no disco.
 	
 	Exemplos de arquivos podem ser encontrados nas pastas drive1files e drive2files.
 
