@@ -1,4 +1,9 @@
-
+/**
+ * 
+ * @author Thales G Moreira
+ * This class implements a simulation of the L2 Cache.
+ * The cache is composed by 5 blocks, being able to load them, search or update..
+ */
 public class L2Cache {
 	public int size = 5;		// Size of the cache in blocks.
 	public int currentsz;		// Current occupied size of the cache

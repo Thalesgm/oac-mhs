@@ -1,4 +1,9 @@
-
+/**
+ * 
+ * @author Thales G Moreira
+ * The manager class implements the simulator, integrating all other classes.
+ * This class is able to call for load search and save, while simulating the hierarchy chain
+ */
 public class Manager {
 	public int corecount;
 	public Disc disco;

@@ -1,7 +1,12 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-
+/**
+ * 
+ * @author Thales G Moreira
+ * This is an optional driving class for the MHS.
+ * To execute it you will need to follow the compilation instructions in the README.txt file
+ */
 public class DriveOpt {
 
 	public static void main(String[] args) {

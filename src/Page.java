@@ -1,4 +1,10 @@
-
+/**
+ * 
+ * @author Thales G Moreira
+ * This class simulates a page, as a data organizing way.
+ * The page is composed by a vector of 8 words.
+ * This class is capable of finding a Word and returning its position on the page.
+ */
 public class Page {
 	private int pagesz = 8;	// Number of Words contained in each page
 	public Word[] word;		// Representation of the page

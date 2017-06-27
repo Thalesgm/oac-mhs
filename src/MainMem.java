@@ -1,4 +1,10 @@
-
+/**
+ * 
+ * @author Thales G Moreira
+ * This class implements a simulation of the main memory as part of the memory hierachy.
+ * The Main memory is composed by and can only load pages, but can separate them in blocks.
+ * Also this class is capable of searching and updating the data contained.
+ */
 public class MainMem {
 	public Page[] page;			// Memory's representation.
 	public int size = 10;		// Memory's size, in Pages.
