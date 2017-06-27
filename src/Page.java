@@ -21,7 +21,7 @@ public class Page {
 	
 	/**
 	 * Method for searching a Word in the page.
-	 * @param add Position for reference in the Page Table
+	 * @param add - Position for reference in the Page Table
 	 * @return The Word searched or null if not found. 
 	 */
 	public Word searchWord(int add){
@@ -48,7 +48,7 @@ public class Page {
 	
 	/**
 	 * Method to separate a block from a page.
-	 * @param add Address of the Word used to define which side of the page will be returned
+	 * @param add - Address of the Word used to define which side of the page will be returned
 	 * @return A Block which contains either the first, or the last block from the page.
 	 */
 	public Block getBlock(int add){
@@ -74,7 +74,7 @@ public class Page {
 	
 	/**
 	 * Method to get the current position of an address in a page;
-	 * @param add Address being searched
+	 * @param add - Address being searched
 	 * @return An integer between 0 and 7, which represents the actual position of the Word in that specific page.
 	 */
 	public int getPosition(int add){
@@ -87,7 +87,7 @@ public class Page {
 	
 	/**
 	 * Searching method for a Word in a page
-	 * @param add Address of the Word being searched.
+	 * @param add - Address of the Word being searched.
 	 * @return True if Word is found. False if it'snt.
 	 */
 	public boolean search(int add){

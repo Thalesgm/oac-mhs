@@ -25,7 +25,7 @@ public class MainMem {
 	 * Method for loading a page from the disc. 
 	 * If memory is not filled. Loads the page to the fist open position.
 	 * If memory is full, loads the page to the Least recently used(LRU) position.
-	 * @param p
+	 * @param p - Page that will be loaded
 	 */
 	public void load(Page p){
 		if(currentsz < size){
@@ -78,7 +78,7 @@ public class MainMem {
 	
 	/**
 	 * Method to find a Page in the Memory, using a specific world that belongs on that page.
-	 * @param add Reference to the world being searched in the memory.
+	 * @param add - 	Reference to the world being searched in the memory.
 	 * @return A value between 0 and currentsz, that represents a position in the memory
 	 *  if the address is found in the memory(Hit),
 	 *  or -1 if the address isn't found(Miss)
@@ -94,8 +94,8 @@ public class MainMem {
 	
 	/**
 	 * Method to update a Word's data in the main memory.
-	 * @param add Address of the word to be updated.
-	 * @param d Data to be used for update.
+	 * @param add - Address of the word to be updated.
+	 * @param d - Data to be used for update.
 	 */
 	public void update(int add, int d){
 		Word w = new Word();

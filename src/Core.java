@@ -23,7 +23,7 @@ public class Core {
 	
 	/**
 	 * Method to load a block, usually from the L2Cache. 
-	 * @param b Block To be loaded in the Cores L1 cache.
+	 * @param b - Block To be loaded in the Cores L1 cache.
 	 */
 	public void load(Block b){
 		if(currentsz < size){
@@ -66,7 +66,7 @@ public class Core {
 	
 	/**
 	 * Method to check if the search for an address results in a hit or a miss.
-	 * @param add Address being looked.
+	 * @param add - Address being looked.
 	 * @return The position if the address is found(hit) or -1 if it doesn't (miss).
 	 */
 	public int hitcheck(int add){
@@ -86,7 +86,7 @@ public class Core {
 	
 	/**
 	 * Method to find a Page in the Cache, using a specific world that belongs on that page.
-	 * @param add Reference to the world being searched in the memory.
+	 * @param add - Reference to the world being searched in the memory.
 	 * @return A value between 0 and currentsz, that represents a position in the Cache
 	 *  if the address is found in the Cache(Hit),
 	 *  or -1 if the address isn't found(Miss)
@@ -104,8 +104,8 @@ public class Core {
 	
 	/**
 	 * Method to Update the data in an Page Table's address.
-	 * @param add address to be updated
-	 * @param d Data for updating.
+	 * @param add - address to be updated
+	 * @param d - Data for updating.
 	 */
 	public void update(int add, int d){
 		Word w = new Word();

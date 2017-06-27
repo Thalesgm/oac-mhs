@@ -54,8 +54,8 @@ public class Disc {
 	
 	/**
 	 * Method for updating the data of a Word
-	 * @param p Position on the page that needs to be updated.
-	 * @param d New data value for the Word.
+	 * @param p - Position on the page that needs to be updated.
+	 * @param d - New data value for the Word.
 	 */
 	public void update(int add, int d){
 		int dpos = add/8;
@@ -66,7 +66,7 @@ public class Disc {
 	
 	/**
 	 * Method to load Data into the disc.
-	 * @param d Value to be added to the disc.
+	 * @param d - Value to be added to the disc.
 	 */
 	public void load(int d){
 		int pos = page[currentsz/8].getPosition(currentsz);

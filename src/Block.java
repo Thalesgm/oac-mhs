@@ -20,7 +20,7 @@ public class Block {
 	
 	/**
 	 * Method to check if the block contains a Word. 
-	 * @param add Address in the disc being searched.
+	 * @param add - Address in the disc being searched.
 	 * @return True if the block contains the Word(Hit). False if it doesn't(Miss).
 	 */
 	public boolean search(int add){
@@ -36,7 +36,7 @@ public class Block {
 	
 	/**
 	 * Gets the data from and address.
-	 * @param add The address which needs to be retrieved
+	 * @param add - The address which needs to be retrieved
 	 * @return The data part of the word.
 	 */
 	public int getData(int add){
@@ -52,8 +52,8 @@ public class Block {
 	
 	/**
 	 * Method for updating the data in a Word.
-	 * @param p Address reference to Page Table.
-	 * @param d New value for Word's data.
+	 * @param p - Address reference to Page Table.
+	 * @param d - New value for Word's data.
 	 */
 	public void updateWord(int p, int d){
 		int i =  0;
@@ -75,7 +75,7 @@ public class Block {
 	
 	/**
 	 * Method to search a Word in a Block.
-	 * @param add Address of the Word Being searched
+	 * @param add - Address of the Word Being searched
 	 * @return The Word searched if it's found. Null if doesn't.
 	 */
 	public Word searchWord(int add){

@@ -24,7 +24,7 @@ public class L2Cache {
 	 * Loading method for a incoming block.
 	 * If Cache is not filled, loads the block on the first block available.
 	 * If Cache is full, loads in the Least Recently Used(LRU) position.
-	 * @param b Block that needs to be loaded in the Cache.
+	 * @param b - Block that needs to be loaded in the Cache.
 	 */
 	public void load(Block b){
 		if(currentsz < size){
@@ -78,7 +78,7 @@ public class L2Cache {
 	
 	/**
 	 * Method to find a Block in the Cache, using a specific world that belongs on that page.
-	 * @param add Reference to the world being searched in the memory.
+	 * @param add - Reference to the world being searched in the memory.
 	 * @return A value between 0 and currentsz, that represents a position in the Cache
 	 *  if the address is found in the Cache(Hit),
 	 *  or -1 if the address isn't found(Miss)
@@ -94,8 +94,8 @@ public class L2Cache {
 	
 	/**
 	 * Method to update the data in a Word if it's present on the cache.
-	 * @param add Address of the Word in the Page Table.
-	 * @param d Data for updating.
+	 * @param add - Address of the Word in the Page Table.
+	 * @param d - Data for updating.
 	 */
 	public void update(int add, int d){
 		Word w = new Word();
