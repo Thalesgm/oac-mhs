@@ -77,6 +77,10 @@ public class Core {
 		}
 		return -1;
 	}
+	
+	/**
+	 * Printing method for Core's L1 Cache.
+	 */
 	public void print(){
 		for(int i = 0; i < currentsz; i++){
 			block[i].print();
