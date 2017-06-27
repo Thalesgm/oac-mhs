@@ -1,4 +1,11 @@
-
+/**
+ * 
+ * @author Thales G Moreira
+ * This class simulates the Disc as part of the memory hierarchy.
+ * The Disc is composed by 30 pages, while being able to load a word at a time.
+ * The Disc is organized and able to find a Word's page just by its individual address,
+ * using the page's table.
+ */
 public class Disc {
 	public int capacity = 240;	// Default number of words that can be stored.
 	public int pagetotal;		// Total number of pages;

@@ -1,4 +1,9 @@
-
+/**
+ * 
+ * @author Thales G Moreira
+ * This class implements the simulation of a Core's L1 Cache
+ * The L1 Cache is composed by a pair of blocks, only being capable of loading or saving one at a time.
+ */
 public class Core {
 	public int size = 2;	// Size of the L1 Cache
 	public Block[] block;	// Representation of the L1

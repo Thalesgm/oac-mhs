@@ -1,7 +1,12 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-
+/**
+ * 
+ * @author Thales G Moreira
+ * This is the main drive for the MHS.
+ * To execute this drive you will need a commands file, as described in the README.txt file.
+ */
 public class Drive {
 
 	public static void main(String[] args) {

@@ -1,4 +1,11 @@
+/**
+ * 
+ * @author Thales G Moreira
+ * This class implements the simulation of a block as part of memory organization.
+ * The block is composed by a vector of 4 words.
+ * This class is capable of finding a Word and returning its position on the block.
 
+ */
 public class Block {
 	private int blocksz = 4;	// Default Block size.
 	public Word word[];			// Representation of the block as a vector of words.
