@@ -12,7 +12,7 @@ public class Drive {
 	public static void main(String[] args) {
 		String file1 = args[0];
 		Manager m = new Manager(4);
-		
+
 		try {
 			Scanner s = new Scanner(new File(file1));
 			m = new Manager(s.nextInt());
@@ -51,7 +51,6 @@ public class Drive {
 			}
 			s.close();
 		} catch (FileNotFoundException e) {
-
 			e.printStackTrace();
 		}
 	}
