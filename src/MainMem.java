@@ -23,14 +23,14 @@ public class MainMem {
 	
 	/**
 	 * Method for loading a page from the disc. 
-	 * If memory is not filled. Loads the page to the fist open position.
+	 * If memory is not filled, loads the page to the fist open position.
 	 * If memory is full, loads the page to the Least recently used(LRU) position.
 	 * @param p - Page that will be loaded
 	 */
 	public void load(Page p){
 		if(currentsz < size){
 			page[currentsz].idpag = p.idpag;
-			for(int i =0; i < 8; i++){
+			for(int i = 0; i < 8; i++){
 				page[currentsz].word[i].data = p.word[i].data;
 				page[currentsz].word[i].address = p.word[i].address;
 			}
@@ -41,7 +41,7 @@ public class MainMem {
 		else{
 			int lru = getLRU();
 			page[lru].idpag = p.idpag;
-			for(int i =0; i < 8; i++){
+			for(int i = 0; i < 8; i++){
 				page[lru].word[i].data = p.word[i].data;
 				page[lru].word[i].address = p.word[i].address;
 			}
@@ -103,7 +103,8 @@ public class MainMem {
 			if(page[i].search(add)){
 				w = page[i].searchWord(add);
 				w.data = d;
-				usage[i]++;
+				usage[i] = countLRU;
+				countLRU++;
 			}
 		}
 	}

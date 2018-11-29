@@ -22,7 +22,10 @@ Para executá-lo, são necessarios os arquivos abaixo listados.
 
 Todos os arquivos acima se encontram na pasta src.
 Para compilação o usuario pode usar uma IDE com compilador java (ex: Eclipse)
-ou executar a partir da linha de comando em terminal seguindo os passos:
+Para execução usando IDEs pode ser necessário configurar a leitura de arquivo, através de:
+Run->Run Configurations... -> Arguments -> Variables -> File_prompt.
+
+Para executar a partir da linha de comando em terminal seguindo os passos:
 	1- Acessar a pasta src
 	2- Executar javac para drive.java
 	3- Executar 'drive arg0'
@@ -36,7 +39,7 @@ Argumentos:
 
 	O arquivo de comandos para o drive consiste em uma lista dos comandos abaixo:
 	
-	LOAD A B: Carrega o endereço B para o core A
+	LOAD A B: Carrega o endereço B para o core
 	SAVE A B C: Escreve em B o valor de C por meio do core A.
 	PRINTD: Imprime o conteudo do Disco, organizado por paginas.
 	PRINTM: Imprime o conteudo da memoria principal organizada por paginas.

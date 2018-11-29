@@ -29,7 +29,7 @@ public class L2Cache {
 	public void load(Block b){
 		if(currentsz < size){
 			block[currentsz].idblock = b.idblock;
-			for(int i =0; i < 4; i++){
+			for(int i = 0; i < 4; i++){
 				block[currentsz].word[i].data = b.word[i].data;
 				block[currentsz].word[i].address = b.word[i].address;
 			}
@@ -40,7 +40,7 @@ public class L2Cache {
 		else{
 			int lru = getLRU();
 			block[lru].idblock = b.idblock;
-			for(int i =0; i < 4; i++){
+			for(int i = 0; i < 4; i++){
 				block[lru].word[i].data = b.word[i].data;
 				block[lru].word[i].address = b.word[i].address;
 			}
