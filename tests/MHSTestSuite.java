@@ -7,7 +7,8 @@ import org.junit.runners.Suite.SuiteClasses;
 	BlockTest.class,
 	PageTest.class,
 	DiscTest.class,
-	MainMemTest.class
+	MainMemTest.class,
+	L2CacheTest.class
 })
 public class MHSTestSuite {
 }
