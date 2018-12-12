@@ -13,6 +13,7 @@ public class DiscTest {
 	
 	@Test
 	public void testUpdate() {
+		
 		//Testing the update Method
 		Assert.assertEquals(0, d.page[0].word[0].data); //Checking original value
 		d.update(0, 5);									//Updating

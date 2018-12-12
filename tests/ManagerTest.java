@@ -14,7 +14,7 @@ public class ManagerTest {
 	
 	
 	@Test
-	public void testDisctoMem() {
+	public void testDiscToMem() {
 		
 		//Verification for the first page
 		Assert.assertEquals(-1, m.memp.getPage(0));

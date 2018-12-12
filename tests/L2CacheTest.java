@@ -3,22 +3,35 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class L2CacheTest {
-	Disc d = new Disc();
-	MainMem m = new MainMem();
+	//Creating Blocks to use in methods
+	Block bA = new Block(0);
+	Block bB = new Block(1);
+	Block bC = new Block(2);
+	Block bD = new Block(3);
+	Block bE = new Block(4);
+	Block bF = new Block(5);
 	L2Cache l = new L2Cache();
 	@Before
 	public void setup() {
-		for(int i = 0; i < 240; i++){	// Filling the disc.
-			d.load(i);
+		for(int i = 0; i < 4; i++){	// Filling the disc.
+			bA.word[i].data = i;
+			bA.word[i].address = i;
+			bB.word[i].data = i+4;
+			bB.word[i].address = i+4;
+			bC.word[i].data = i+8;
+			bC.word[i].address = i+8;
+			bD.word[i].data = i+12;
+			bD.word[i].address = i+12;
+			bE.word[i].data = i+16;
+			bE.word[i].address = i+16;
+			bF.word[i].data = i+20;
+			bF.word[i].address = i+20;
 		}
-		for(int i = 0; i < 10; i++) {
-			m.load(d.page[i]);
-		}
-		l.load(m.page[0].getBlock(0));
-		l.load(m.page[0].getBlock(4));
-		l.load(m.page[1].getBlock(8));
-		l.load(m.page[1].getBlock(12));
-		l.load(m.page[2].getBlock(16));
+		l.load(bA);
+		l.load(bB);
+		l.load(bC);
+		l.load(bD);
+		l.load(bE);
 	}
 	// 0123 4567 891011 12131415 16171819
 	@Test
@@ -30,7 +43,7 @@ public class L2CacheTest {
 	@Test
 	public void testGetLRU() {
 		Assert.assertEquals(0, l.getLRU());
-		l.load(m.page[2].getBlock(20));
+		l.load(bE);
 		Assert.assertEquals(1, l.getLRU());
 	}
 	
